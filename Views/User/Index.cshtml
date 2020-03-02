@@ -1,0 +1,30 @@
+﻿@model PCshop_.Models.registration
+
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<form action="/User/Index">
+    <table>
+        <tr>
+            <td>user-Id:</td>
+            <td>@Model.Id</td>
+        </tr>
+        <tr>
+            <td>username:</td>
+            <td>@Model.Username</td>
+        </tr>
+        <tr>
+            <td>email:</td>
+            <td>@Model.Email</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>@Model.Password</td>
+        </tr>
+
+    </table>
+</form>
+

@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @{
+        ViewBag.Title = "Home Page";
+    }
+    @Styles.Render("/Content/MyCSS/SlideShow.css")
+    @Styles.Render("/Content/MyCSS/Index.css")
+    @Styles.Render("/Content/MyCSS/Search.css")
+
+</head>
+<body class="MainBody">
+    <!--------------------------------------Search button------------>
+    <div id="search_id">
+        <form class="example" action="/action_page.php" style="margin:auto; max-width:300px">
+            <input type="text" placeholder="Search..." name="search2">
+            <button type="submit"><i class="glyphicon glyphicon-search"></i></button>
+        </form>
+    </div>
+    <!------------------------------კატეგორიები------------------->
+    <div class="list-group">
+        <button type="button" class="list-group-item list-group-item-action active">
+            All Departments
+        </button>
+        <button type="button" class="list-group-item list-group-item-action"><a href="/Departments/Computers"> Computers </a></button>
+        <button type="button" class="list-group-item list-group-item-action"><a href="/Departments/Monitors">Monitors</a></button>
+        <button type="button" class="list-group-item list-group-item-action"><a href="/Departments/Notebooks">Notebooks</a></button>
+        <button type="button" class="list-group-item list-group-item-action"><a href="/Departments/Tablets_Smartphones">Tablets & Smartphones</a></button>
+        <button type="button" class="list-group-item list-group-item-action"><a href="/Departments/Connectivity">Connectivity</a></button>
+        <button type="button" class="list-group-item list-group-item-action"><a href="/Departments/Periphery">Periphery</a></button>
+        <button type="button" class="list-group-item list-group-item-action"><a href="/Departments/Power_Products">Power products</a></button>
+        <button type="button" class="list-group-item list-group-item-action"><a href="/Departments/Accessories">Accessories</a></button>
+        <button type="button" class="list-group-item list-group-item-action"><a href="/Departments/Electronics">Electronics</a></button>
+        <button type="button" class="list-group-item list-group-item-action"><a href="/Departments/Software">Software</a></button>
+    </div>
+    <!-------------------------------------slides--------------------------->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="/Content/images/img1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="/Content/images/img2.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="/Content/images/img3.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+    <!-----------------------------photo_ს შუაში წარწერა და motherboard_ს ფოტო------------------>
+    <div class="container">
+        <img id="mothboard" src="/Content/Images/Main/img4.jpg" alt="Motherboard" width="1000" height="300">
+        <div class="center"><a class="mother_a" href="/Departments/Software">Bye Now</a></div>
+    </div>
+    <h1>Shop Now</h1>
+    <!------------------------------post_ის ფოტოები--------------------------------------------->
+    <div id="postphoto">
+        <img class="postphoto" src="/Content/Images/Main/post1.jpg" alt="postphoto1" width="200" />
+        <img class="postphoto" src="/Content/Images/Main/post2.jpg" alt="postphoto2" width="150" />
+        <img class="postphoto" src="/Content/Images/Main/post3.jpg" alt="postphoto3" width="200" />
+        <img class="postphoto" src="/Content/Images/Main/post4.jpg" alt="postphoto4" width="170" />
+        <img class="postphoto" src="/Content/Images/Main/post5.jpg" alt="postphoto5" width="200" />
+        <img class="postphoto" src="/Content/Images/Main/post6.jpg" alt="postphoto6" width="200" />
+        <img class="postphoto" src="/Content/Images/Main/post7.jpg" alt="postphoto7" width="200" />
+        <img class="postphoto" src="/Content/Images/Main/post8.jpg" alt="postphoto8" width="250" />
+        <img class="postphoto" src="/Content/Images/Main/post9.jpg" alt="postphoto9" width="150" />
+        <img class="postphoto" src="/Content/Images/Main/post10.jpg" alt="postphoto10" width="200" />
+    </div>
+    <!-----------------------------------Map---------------------------->
+    <div class="container-map">
+
+        <div class="line1"></div>
+        <h2 class="" style="text-align:center;">Our Current Location</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2106.318613407884!2d44.78833510678011!3d41.7035922116548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cda58186cf3%3A0x970c6e7fc66ca250!2z4YOl4YOU4YOX4YOdIOGDk-GDkCDhg5nhg53hg6Lhg5Q!5e0!3m2!1sen!2sge!4v1551977488951" frameborder="0"></iframe>
+    </div>
+
+    <!-----------------------------------scripts-------------------------------------->
+    <script src="/Scripts/MyScripts/SlideShow.js"></script>
+</body>
+</html>
+

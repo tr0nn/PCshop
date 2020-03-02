@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PCshop_" Class="MyConnectionDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=PCshop_;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="PCshop_ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Credit_Card" Member="Credit_Cards">
+    <Type Name="Credit_Card">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Card_number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Exp_month" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Exp_year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CVV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="registration_Credit_Card" Member="registration" ThisKey="UserID" OtherKey="Id" Type="registration" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.registration" Member="registrations">
+    <Type Name="registration">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="registration_Credit_Card" Member="Credit_Cards" ThisKey="Id" OtherKey="UserID" Type="Credit_Card" />
+      <Association Name="registration_User_Info" Member="User_Infos" ThisKey="Id" OtherKey="UserID" Type="User_Info" />
+    </Type>
+  </Table>
+  <Table Name="dbo.User_Info" Member="User_Infos">
+    <Type Name="User_Info">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Full_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Zip" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="registration_User_Info" Member="registration" ThisKey="UserID" OtherKey="Id" Type="registration" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

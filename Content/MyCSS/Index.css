@@ -1,0 +1,60 @@
+﻿.MainBody {
+    background-image: linear-gradient(SkyBlue, AliceBlue, white);
+}
+
+/*---------------layoutში login და register  ღილაკი---*/
+#LogRegid {
+    margin-left: 720px;
+    position: absolute;
+}
+#LogRegid1{
+    margin-left: 600px;
+}
+/*--------------category------*/
+.list-group {
+    position: absolute;
+}
+
+/*----------------postphoto---------------*/
+.postphoto {
+    margin: 10px;
+}
+
+#postphoto {
+    margin: 10px;
+    background-color: white;
+}
+
+/*------------motherbord_ს ფოტოს css-----*/
+.container {
+    position: relative;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: black;
+}
+.mother_a{
+    color:black;
+    font-family: sans-serif;
+}
+
+#mothboard {
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+    border-radius: 20%;
+}
+
+/*------------ Map----*/
+.container-map {
+    width: 100%;
+    margin-top: 30px;
+    padding: 20px 0px 30px 0px;
+    background-color: aliceblue;
+    text-align: center;
+}

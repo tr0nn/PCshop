@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Sign in</title>
+    @Styles.Render("/Content/MyCSS/Login.css")
+</head>
+
+<body>
+    <div class="main">
+        <p class="sign" align="center">Sign in</p>
+        <form class="form1" method="Post" action="/Auth/login">
+            <input class="un " type="text" align="center" placeholder="Username" name="Name">
+            <input class="pass" type="password" align="center" placeholder="Password" name="Password">
+            <div class="form-group">
+                <button type="submit" class="btn btn-success center-block">Log in</button>
+            </div>
+            <p class="forgot" align="center"><a href="/Auth/ForgPassword">Forgot Password?</a></p>
+        </form>
+    </div>
+    <div class="signin">
+        <p>Don't have an account ? <a href="/Auth/Register"><strong class="strongreg"> Registration</strong></a></p>
+    </div> <br /> <br /> <br /><br /> <br /> <br />
+</body>
+</html>
+
+
